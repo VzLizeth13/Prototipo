@@ -1,0 +1,241 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>ANIMALES</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/acciones.js" type="text/javascript"></script>
+<!-- necesario*/ -->
+<script src="phonegap.js"></script>
+
+<style>
+.titulo {
+	position:relative;
+	top:10%;
+	text-align:center;
+	font-size:3em;
+	font-weight:bold;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#000;
+}
+.titulo2 {
+	position:relative;
+	top:10%;
+	text-align:center;
+	font-size:3em;
+	font-weight:bold;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#000;
+	background:#0C6;
+}
+.boton {
+	position: relative;
+	text-align: center;
+	font-size: 1em;
+	color: #000;
+	background: #FFC;
+}
+.boton2 {
+	position:relative;
+	text-align:center;
+	color:#000;
+	background:#FFC;
+}
+#principal {
+	position:absolute;
+	left:0px;
+	top:0;
+	width:100%;
+	background:#FFC;
+}
+#pantalla {
+	position:absolute;
+	width:100%;
+	height:10%;
+	background: #0F6;
+	text-align:center;
+	font-size:5em;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#animales {
+	float:left;
+	position:relative;
+	width:50%;
+	height:90%;
+}
+.animal {
+	margin: 10px 50px 10px 350px;
+	position: relative;
+	float: left;
+	height: 90%;
+	outline: #000 solid 1px;
+	width: 24%;
+	background: #0C6;
+	/* [disabled]height:25%; */
+}
+.textoanimal {
+	position:relative;
+	top:80%;
+	text-align:center;
+	font-size:inherit;
+	font-weight:bold;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#000;
+	background:#0C6;
+}
+#animales2 {
+	float:right;
+	position:relative;
+	width:50%;
+	height:90%;
+}
+.animal2 {
+	margin: 10px 350px 10px 50px;
+	position:relative;
+	float:left;
+	height:90%;
+	outline:#000 solid 1px;
+	width:24%;
+	background:#0C6;
+	height:25%;
+}
+.textoanimal2 {
+	position:relative;
+	top:80%;
+	text-align:center;
+	font-size:inherit;
+	font-weight:bold;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#000;
+	background:#0C6;
+}
+.tocada {
+	color:#300;
+	background:#F00;
+	outline:solid 1px #FF0000;
+}
+</style>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="content" style="background:url(fondito.jpg)">	
+    	<div class="titulo" align="center">ANIMALES</div>
+    	<div align="center" data-role="controlgroup" data-type="vertical">
+        	<div style="width:30%">
+        		<a href="#page2" data-role="button"  class="boton">
+        		Animales Domesticos
+        		</a>
+       			<a href="#page3" data-role="button"  class="boton">
+       			Animales Salvajes
+       			</a>
+       		</div>
+		</div>
+ 	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" class="titulo2">
+    	<a href="#page" data-role="button" class="boton2">
+        Regresar
+        </a>
+		<h1 class="titulo2">ANIMALES DOMESTICOS</h1>
+	</div>
+	<div id="animales" style="background:url(fondo.jpg)">
+    	<div id="gato" class="animal">
+            <img src="gato.jpg" width="165" height="150" alt="gato">
+        	<div class="textoanimal">
+            GATO
+            </div>
+      	</div>
+        <div id="caballo" class="animal">
+            <img src="caballo.jpg" width="165" height="150" alt="caballo">           
+        	<div class="textoanimal">
+            CABALLO
+            </div>
+      	</div>
+        <div id="pollo" class="animal">
+            <img src="pollo.jpg" width="165" height="150" alt="pollo">
+        	<div class="textoanimal">
+            POLLO
+            </div>
+      	</div>
+   	</div>
+  	<div id="animales2" style="background:url(fondo.jpg)">
+        <div id="perro" class="animal2">
+            <img src="perro.jpg" width="165" height="150" alt="perro">
+        	<div class="textoanimal">
+            PERRO
+            </div>
+      	</div>
+        <div id="puerco" class="animal2">
+            <img src="puerco.jpg" width="165" height="150" alt="puerco">
+        	<div class="textoanimal">
+            PUERCO
+            </div>
+      	</div>
+        <div id="vaca" class="animal2">
+            <img src="vaca.jpg" width="165" height="150" alt="vaca">
+        	<div class="textoanimal">
+          	VACA
+            </div>
+      	</div>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header" class="titulo2">
+    	<a href="#page" data-role="button" class="boton2">
+        Regresar
+        </a>
+		<h1 class="titulo2">ANIMALES SALVAJES</h1>
+	</div>
+	<div id="animales" style="background:url(fondo.jpg)">
+    	<div id="lobo" class="animal">
+            <img src="lobo.jpg" width="165" height="150" alt="lobo">
+        	<div class="textoanimal">
+            LOBO
+            </div>
+      	</div>
+        <div id="elefante" class="animal">
+            <img src="elefante.jpg" width="165" height="150" alt="elefante">
+        	<div class="textoanimal">
+            ELEFANTE
+            </div>
+      	</div>
+        <div id="oso" class="animal">
+            <img src="oso.jpg" width="165" height="150" alt="oso">
+        	<div class="textoanimal">
+            OSO
+            </div>
+      	</div>
+   	</div>
+  	<div id="animales2" style="background:url(fondo.jpg)">
+        <div id="serpiente" class="animal2">
+            <img src="serpiente.jpg" width="165" height="150" alt="serpiente">
+        	<div class="textoanimal">
+            SERPIENTE
+            </div>
+      	</div>
+        <div id="rana" class="animal2">
+            <img src="rana.jpg" width="165" height="150" alt="rana">
+        	<div class="textoanimal">
+            RANA
+            </div>
+      	</div>
+        <div id="tigre" class="animal2">
+            <img src="tigre.jpg" width="165" height="150" alt="tigre">
+        	<div class="textoanimal">
+          	TIGRE
+            </div>
+      	</div>
+	</div>
+</div>
+
+</body>
+</html>
